@@ -1,11 +1,13 @@
-For compile used Maven
+# To-Do List
+Console simple To-Do list   
 
 ### How dependencies are added in a jar?   
 `pom.xml` include [maven-dependency-plugin](https://github.com/apache/maven-dependency-plugin) to copy all dependencies to target/lib/ folder, and used [maven-jar-plugin](https://github.com/apache/maven-jar-plugin) to added the dependency classpath.
 
 ### How to run:   
+For compile used Maven.   
 Build project with Maven (dependencies auto added to the lib folder next to the jar file)   
-`java -jar simple-todo-list-0.0.1.jar`
+And run: `java -jar simple-todo-list-0.0.1.jar`
 
 ### Available commands:  
 **add** - for adding a new task  
