@@ -1,7 +1,7 @@
 For compile used Maven
 
 ### How dependencies are added in a jar?   
-pom.xml include maven-dependency-plugin to copy all dependencies to target/lib/ folder, and used maven-jar-plugin to added the dependency classpath.
+`pom.xml` include [maven-dependency-plugin](https://github.com/apache/maven-dependency-plugin) to copy all dependencies to target/lib/ folder, and used [maven-jar-plugin](https://github.com/apache/maven-jar-plugin) to added the dependency classpath.
 
 ### How to run:   
 Build project with Maven (dependencies auto added to the lib folder next to the jar file)   
