@@ -1,0 +1,22 @@
+# JetBrains software
+.idea/
+*.iml
+
+# Gradle cache & gradle wrapper
+.gradle/
+gradle/
+gradlew
+gradlew.bat
+gradle.sh
+# Compile results
+build/
+target/
+out/
+
+# logs
+log/
+*.log
+*.json
+
+# data file
+*.ser
