@@ -1,15 +1,15 @@
 ## To-Do List
 Console simple To-Do list   
 
-#### How dependencies are added in a jar?
+### How dependencies are added in a jar?
 `pom.xml` include [maven-dependency-plugin](https://github.com/apache/maven-dependency-plugin) to copy all dependencies to target/lib/ folder, and used [maven-jar-plugin](https://github.com/apache/maven-jar-plugin) to added the dependency classpath.
 
-#### How to run:
+### How to run:
 For compile used Maven.   
 Build project with Maven (dependencies auto added to the lib folder next to the jar file)   
 And run: `java -jar simple-todo-list-0.0.1.jar`
 
-#### Available commands:
+### Available commands:
 **add** - for adding a new task  
 `add 'title' 'description' date`   
 
@@ -29,6 +29,6 @@ If enter YES, then all tasks are deleted and if enter NO, date will be requested
 **find** - for word search in description   
 `find 'word'`   
  
-#### Features
+### Features
 logging.log - log file   
 data.ser - file with saved tasks (used serialization and deserialization )
