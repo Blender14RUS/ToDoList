@@ -13,7 +13,7 @@ import org.apache.log4j.Logger;
 public class LoaderImpl implements Loader {
 
   private static final String FILE = "data.ser";
-  public static final Logger LOG = Logger.getLogger(LoaderImpl.class);
+  private static final Logger LOG = Logger.getLogger(LoaderImpl.class);
 
   private Tasks tasks;
 
@@ -37,9 +37,7 @@ public class LoaderImpl implements Loader {
     try (FileInputStream inputStream = new FileInputStream(FILE);
         ObjectInputStream objectInputStream = new ObjectInputStream(inputStream)) {
 
-      Tasks readTasks = (Tasks) objectInputStream.readObject();
-
-      this.tasks = readTasks;
+      this.tasks = (Tasks) objectInputStream.readObject();
 
     } catch (Exception e) {
       LOG.error("Exception thrown during data init: " + e.toString());

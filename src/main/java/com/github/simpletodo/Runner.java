@@ -3,6 +3,7 @@ package com.github.simpletodo;
 import com.github.simpletodo.domain.Task;
 import com.github.simpletodo.loader.Loader;
 import com.github.simpletodo.loader.impl.LoaderImpl;
+import com.github.simpletodo.service.ToDoService;
 import com.github.simpletodo.service.impl.ToDoServiceImpl;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -18,13 +19,13 @@ import org.joda.time.format.DateTimeFormatter;
 
 public class Runner {
 
-  public static final Logger LOG = Logger.getLogger(Runner.class);
+  private static final Logger LOG = Logger.getLogger(Runner.class);
 
-  public void run() {
+  void run() {
     Scanner in = new Scanner(System.in);
     Loader loader = new LoaderImpl();
     loader.init();
-    ToDoServiceImpl toDoService = new ToDoServiceImpl(loader);
+    ToDoService toDoService = new ToDoServiceImpl(loader);
     printHelp();
     while (true) {
       try {
@@ -90,9 +91,7 @@ public class Runner {
       }
       if (i % 2 == 0) {
         String[] tmp = arr[i].split(" ");
-        for (String t : tmp) {
-          argsList.add(t);
-        }
+        Collections.addAll(argsList, tmp);
       } else {
         argsList.add("'" + arr[i] + "'");
       }

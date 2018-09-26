@@ -18,7 +18,7 @@ import org.joda.time.format.DateTimeFormatter;
 @AllArgsConstructor
 public class ToDoServiceImpl implements ToDoService {
 
-  public static final Logger LOG = Logger.getLogger(ToDoServiceImpl.class);
+  private static final Logger LOG = Logger.getLogger(ToDoServiceImpl.class);
 
   private Loader loader;
 
@@ -27,7 +27,7 @@ public class ToDoServiceImpl implements ToDoService {
     LOG.info("add task: " + task);
     boolean addStatus = loader.getSet()
                         .add(task);
-    if (addStatus == true) {
+    if (addStatus) {
       System.out.println("Task added");
     }
     loader.save();
